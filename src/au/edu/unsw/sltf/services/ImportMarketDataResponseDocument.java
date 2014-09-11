@@ -1,7 +1,7 @@
 /*
  * An XML document type.
  * Localname: importMarketDataResponse
- * Namespace: http://sltf.unsw.edu.au/topdown
+ * Namespace: http://sltf.unsw.edu.au/services
  * Java type: au.edu.unsw.sltf.services.ImportMarketDataResponseDocument
  *
  * Automatically generated - do not modify.
@@ -10,14 +10,14 @@ package au.edu.unsw.sltf.services;
 
 
 /**
- * A document containing one importMarketDataResponse(@http://sltf.unsw.edu.au/topdown) element.
+ * A document containing one importMarketDataResponse(@http://sltf.unsw.edu.au/services) element.
  *
  * This is a complex type.
  */
 public interface ImportMarketDataResponseDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImportMarketDataResponseDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s3750EB2ABD0F51AFA86611260B2ACC08").resolveHandle("importmarketdataresponsefb79doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImportMarketDataResponseDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s8361EB0BD085F62915BBD701F402D452").resolveHandle("importmarketdataresponse489cdoctype");
     
     /**
      * Gets the "importMarketDataResponse" element
@@ -35,34 +35,34 @@ public interface ImportMarketDataResponseDocument extends org.apache.xmlbeans.Xm
     au.edu.unsw.sltf.services.ImportMarketDataResponseDocument.ImportMarketDataResponse addNewImportMarketDataResponse();
     
     /**
-     * An XML importMarketDataResponse(@http://sltf.unsw.edu.au/topdown).
+     * An XML importMarketDataResponse(@http://sltf.unsw.edu.au/services).
      *
      * This is a complex type.
      */
     public interface ImportMarketDataResponse extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImportMarketDataResponse.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s3750EB2ABD0F51AFA86611260B2ACC08").resolveHandle("importmarketdataresponse28f1elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImportMarketDataResponse.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s8361EB0BD085F62915BBD701F402D452").resolveHandle("importmarketdataresponseca24elemtype");
         
         /**
-         * Gets the "return" element
+         * Gets the "eventSetId" element
          */
-        java.lang.String getReturn();
+        java.lang.String getEventSetId();
         
         /**
-         * Gets (as xml) the "return" element
+         * Gets (as xml) the "eventSetId" element
          */
-        org.apache.xmlbeans.XmlString xgetReturn();
+        org.apache.xmlbeans.XmlString xgetEventSetId();
         
         /**
-         * Sets the "return" element
+         * Sets the "eventSetId" element
          */
-        void setReturn(java.lang.String xreturn);
+        void setEventSetId(java.lang.String eventSetId);
         
         /**
-         * Sets (as xml) the "return" element
+         * Sets (as xml) the "eventSetId" element
          */
-        void xsetReturn(org.apache.xmlbeans.XmlString xreturn);
+        void xsetEventSetId(org.apache.xmlbeans.XmlString eventSetId);
         
         /**
          * A factory class with static methods for creating instances

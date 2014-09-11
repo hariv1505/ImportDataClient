@@ -1,14 +1,14 @@
 /*
  * An XML document type.
  * Localname: importMarketData
- * Namespace: http://sltf.unsw.edu.au/topdown
+ * Namespace: http://sltf.unsw.edu.au/services
  * Java type: au.edu.unsw.sltf.services.ImportMarketDataDocument
  *
  * Automatically generated - do not modify.
  */
 package au.edu.unsw.sltf.services.impl;
 /**
- * A document containing one importMarketData(@http://sltf.unsw.edu.au/topdown) element.
+ * A document containing one importMarketData(@http://sltf.unsw.edu.au/services) element.
  *
  * This is a complex type.
  */
@@ -21,7 +21,7 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
     }
     
     private static final javax.xml.namespace.QName IMPORTMARKETDATA$0 = 
-        new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "importMarketData");
+        new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "importMarketData");
     
     
     /**
@@ -74,7 +74,7 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
         }
     }
     /**
-     * An XML importMarketData(@http://sltf.unsw.edu.au/topdown).
+     * An XML importMarketData(@http://sltf.unsw.edu.au/services).
      *
      * This is a complex type.
      */
@@ -87,13 +87,13 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
         }
         
         private static final javax.xml.namespace.QName SEC$0 = 
-            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "sec");
+            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "sec");
         private static final javax.xml.namespace.QName STARTDATE$2 = 
-            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "startDate");
+            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "startDate");
         private static final javax.xml.namespace.QName ENDDATE$4 = 
-            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "endDate");
-        private static final javax.xml.namespace.QName DATASOURCE$6 = 
-            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "dataSource");
+            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "endDate");
+        private static final javax.xml.namespace.QName DATASOURCEURL$6 = 
+            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "dataSourceURL");
         
         
         /**
@@ -167,7 +167,7 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
         /**
          * Gets the "startDate" element
          */
-        public java.lang.String getStartDate()
+        public java.util.Calendar getStartDate()
         {
             synchronized (monitor())
             {
@@ -178,20 +178,20 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
                 {
                     return null;
                 }
-                return target.getStringValue();
+                return target.getCalendarValue();
             }
         }
         
         /**
          * Gets (as xml) the "startDate" element
          */
-        public org.apache.xmlbeans.XmlString xgetStartDate()
+        public org.apache.xmlbeans.XmlDateTime xgetStartDate()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(STARTDATE$2, 0);
+                org.apache.xmlbeans.XmlDateTime target = null;
+                target = (org.apache.xmlbeans.XmlDateTime)get_store().find_element_user(STARTDATE$2, 0);
                 return target;
             }
         }
@@ -199,7 +199,7 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
         /**
          * Sets the "startDate" element
          */
-        public void setStartDate(java.lang.String startDate)
+        public void setStartDate(java.util.Calendar startDate)
         {
             synchronized (monitor())
             {
@@ -210,23 +210,23 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
                 {
                     target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(STARTDATE$2);
                 }
-                target.setStringValue(startDate);
+                target.setCalendarValue(startDate);
             }
         }
         
         /**
          * Sets (as xml) the "startDate" element
          */
-        public void xsetStartDate(org.apache.xmlbeans.XmlString startDate)
+        public void xsetStartDate(org.apache.xmlbeans.XmlDateTime startDate)
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(STARTDATE$2, 0);
+                org.apache.xmlbeans.XmlDateTime target = null;
+                target = (org.apache.xmlbeans.XmlDateTime)get_store().find_element_user(STARTDATE$2, 0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(STARTDATE$2);
+                    target = (org.apache.xmlbeans.XmlDateTime)get_store().add_element_user(STARTDATE$2);
                 }
                 target.set(startDate);
             }
@@ -235,7 +235,7 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
         /**
          * Gets the "endDate" element
          */
-        public java.lang.String getEndDate()
+        public java.util.Calendar getEndDate()
         {
             synchronized (monitor())
             {
@@ -246,20 +246,20 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
                 {
                     return null;
                 }
-                return target.getStringValue();
+                return target.getCalendarValue();
             }
         }
         
         /**
          * Gets (as xml) the "endDate" element
          */
-        public org.apache.xmlbeans.XmlString xgetEndDate()
+        public org.apache.xmlbeans.XmlDateTime xgetEndDate()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(ENDDATE$4, 0);
+                org.apache.xmlbeans.XmlDateTime target = null;
+                target = (org.apache.xmlbeans.XmlDateTime)get_store().find_element_user(ENDDATE$4, 0);
                 return target;
             }
         }
@@ -267,7 +267,7 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
         /**
          * Sets the "endDate" element
          */
-        public void setEndDate(java.lang.String endDate)
+        public void setEndDate(java.util.Calendar endDate)
         {
             synchronized (monitor())
             {
@@ -278,38 +278,38 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
                 {
                     target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(ENDDATE$4);
                 }
-                target.setStringValue(endDate);
+                target.setCalendarValue(endDate);
             }
         }
         
         /**
          * Sets (as xml) the "endDate" element
          */
-        public void xsetEndDate(org.apache.xmlbeans.XmlString endDate)
+        public void xsetEndDate(org.apache.xmlbeans.XmlDateTime endDate)
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(ENDDATE$4, 0);
+                org.apache.xmlbeans.XmlDateTime target = null;
+                target = (org.apache.xmlbeans.XmlDateTime)get_store().find_element_user(ENDDATE$4, 0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(ENDDATE$4);
+                    target = (org.apache.xmlbeans.XmlDateTime)get_store().add_element_user(ENDDATE$4);
                 }
                 target.set(endDate);
             }
         }
         
         /**
-         * Gets the "dataSource" element
+         * Gets the "dataSourceURL" element
          */
-        public java.lang.String getDataSource()
+        public java.lang.String getDataSourceURL()
         {
             synchronized (monitor())
             {
                 check_orphaned();
                 org.apache.xmlbeans.SimpleValue target = null;
-                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(DATASOURCE$6, 0);
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(DATASOURCEURL$6, 0);
                 if (target == null)
                 {
                     return null;
@@ -319,52 +319,52 @@ public class ImportMarketDataDocumentImpl extends org.apache.xmlbeans.impl.value
         }
         
         /**
-         * Gets (as xml) the "dataSource" element
+         * Gets (as xml) the "dataSourceURL" element
          */
-        public org.apache.xmlbeans.XmlString xgetDataSource()
+        public org.apache.xmlbeans.XmlAnyURI xgetDataSourceURL()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(DATASOURCE$6, 0);
+                org.apache.xmlbeans.XmlAnyURI target = null;
+                target = (org.apache.xmlbeans.XmlAnyURI)get_store().find_element_user(DATASOURCEURL$6, 0);
                 return target;
             }
         }
         
         /**
-         * Sets the "dataSource" element
+         * Sets the "dataSourceURL" element
          */
-        public void setDataSource(java.lang.String dataSource)
+        public void setDataSourceURL(java.lang.String dataSourceURL)
         {
             synchronized (monitor())
             {
                 check_orphaned();
                 org.apache.xmlbeans.SimpleValue target = null;
-                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(DATASOURCE$6, 0);
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(DATASOURCEURL$6, 0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(DATASOURCE$6);
+                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(DATASOURCEURL$6);
                 }
-                target.setStringValue(dataSource);
+                target.setStringValue(dataSourceURL);
             }
         }
         
         /**
-         * Sets (as xml) the "dataSource" element
+         * Sets (as xml) the "dataSourceURL" element
          */
-        public void xsetDataSource(org.apache.xmlbeans.XmlString dataSource)
+        public void xsetDataSourceURL(org.apache.xmlbeans.XmlAnyURI dataSourceURL)
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(DATASOURCE$6, 0);
+                org.apache.xmlbeans.XmlAnyURI target = null;
+                target = (org.apache.xmlbeans.XmlAnyURI)get_store().find_element_user(DATASOURCEURL$6, 0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(DATASOURCE$6);
+                    target = (org.apache.xmlbeans.XmlAnyURI)get_store().add_element_user(DATASOURCEURL$6);
                 }
-                target.set(dataSource);
+                target.set(dataSourceURL);
             }
         }
     }

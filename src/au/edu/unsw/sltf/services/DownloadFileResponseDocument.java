@@ -1,7 +1,7 @@
 /*
  * An XML document type.
  * Localname: downloadFileResponse
- * Namespace: http://sltf.unsw.edu.au/topdown
+ * Namespace: http://sltf.unsw.edu.au/services
  * Java type: au.edu.unsw.sltf.services.DownloadFileResponseDocument
  *
  * Automatically generated - do not modify.
@@ -10,14 +10,14 @@ package au.edu.unsw.sltf.services;
 
 
 /**
- * A document containing one downloadFileResponse(@http://sltf.unsw.edu.au/topdown) element.
+ * A document containing one downloadFileResponse(@http://sltf.unsw.edu.au/services) element.
  *
  * This is a complex type.
  */
 public interface DownloadFileResponseDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DownloadFileResponseDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s3750EB2ABD0F51AFA86611260B2ACC08").resolveHandle("downloadfileresponsec192doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DownloadFileResponseDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s8361EB0BD085F62915BBD701F402D452").resolveHandle("downloadfileresponse45a3doctype");
     
     /**
      * Gets the "downloadFileResponse" element
@@ -35,44 +35,34 @@ public interface DownloadFileResponseDocument extends org.apache.xmlbeans.XmlObj
     au.edu.unsw.sltf.services.DownloadFileResponseDocument.DownloadFileResponse addNewDownloadFileResponse();
     
     /**
-     * An XML downloadFileResponse(@http://sltf.unsw.edu.au/topdown).
+     * An XML downloadFileResponse(@http://sltf.unsw.edu.au/services).
      *
      * This is a complex type.
      */
     public interface DownloadFileResponse extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DownloadFileResponse.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s3750EB2ABD0F51AFA86611260B2ACC08").resolveHandle("downloadfileresponse0151elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DownloadFileResponse.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s8361EB0BD085F62915BBD701F402D452").resolveHandle("downloadfileresponsefdc4elemtype");
         
         /**
-         * Gets the "return" element
+         * Gets the "dataURL" element
          */
-        java.lang.String getReturn();
+        java.lang.String getDataURL();
         
         /**
-         * Gets (as xml) the "return" element
+         * Gets (as xml) the "dataURL" element
          */
-        org.apache.xmlbeans.XmlString xgetReturn();
+        org.apache.xmlbeans.XmlAnyURI xgetDataURL();
         
         /**
-         * Tests for nil "return" element
+         * Sets the "dataURL" element
          */
-        boolean isNilReturn();
+        void setDataURL(java.lang.String dataURL);
         
         /**
-         * Sets the "return" element
+         * Sets (as xml) the "dataURL" element
          */
-        void setReturn(java.lang.String xreturn);
-        
-        /**
-         * Sets (as xml) the "return" element
-         */
-        void xsetReturn(org.apache.xmlbeans.XmlString xreturn);
-        
-        /**
-         * Nils the "return" element
-         */
-        void setNilReturn();
+        void xsetDataURL(org.apache.xmlbeans.XmlAnyURI dataURL);
         
         /**
          * A factory class with static methods for creating instances

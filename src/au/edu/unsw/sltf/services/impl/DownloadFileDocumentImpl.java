@@ -1,14 +1,14 @@
 /*
  * An XML document type.
  * Localname: downloadFile
- * Namespace: http://sltf.unsw.edu.au/topdown
+ * Namespace: http://sltf.unsw.edu.au/services
  * Java type: au.edu.unsw.sltf.services.DownloadFileDocument
  *
  * Automatically generated - do not modify.
  */
 package au.edu.unsw.sltf.services.impl;
 /**
- * A document containing one downloadFile(@http://sltf.unsw.edu.au/topdown) element.
+ * A document containing one downloadFile(@http://sltf.unsw.edu.au/services) element.
  *
  * This is a complex type.
  */
@@ -21,7 +21,7 @@ public class DownloadFileDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
     }
     
     private static final javax.xml.namespace.QName DOWNLOADFILE$0 = 
-        new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "downloadFile");
+        new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "downloadFile");
     
     
     /**
@@ -74,7 +74,7 @@ public class DownloadFileDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         }
     }
     /**
-     * An XML downloadFile(@http://sltf.unsw.edu.au/topdown).
+     * An XML downloadFile(@http://sltf.unsw.edu.au/services).
      *
      * This is a complex type.
      */
@@ -87,13 +87,13 @@ public class DownloadFileDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         }
         
         private static final javax.xml.namespace.QName EVENTSETID$0 = 
-            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "eventSetID");
+            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "eventSetId");
         
         
         /**
-         * Gets the "eventSetID" element
+         * Gets the "eventSetId" element
          */
-        public java.lang.String getEventSetID()
+        public java.lang.String getEventSetId()
         {
             synchronized (monitor())
             {
@@ -109,9 +109,9 @@ public class DownloadFileDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         }
         
         /**
-         * Gets (as xml) the "eventSetID" element
+         * Gets (as xml) the "eventSetId" element
          */
-        public org.apache.xmlbeans.XmlString xgetEventSetID()
+        public org.apache.xmlbeans.XmlString xgetEventSetId()
         {
             synchronized (monitor())
             {
@@ -123,9 +123,9 @@ public class DownloadFileDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         }
         
         /**
-         * Sets the "eventSetID" element
+         * Sets the "eventSetId" element
          */
-        public void setEventSetID(java.lang.String eventSetID)
+        public void setEventSetId(java.lang.String eventSetId)
         {
             synchronized (monitor())
             {
@@ -136,14 +136,14 @@ public class DownloadFileDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
                 {
                     target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(EVENTSETID$0);
                 }
-                target.setStringValue(eventSetID);
+                target.setStringValue(eventSetId);
             }
         }
         
         /**
-         * Sets (as xml) the "eventSetID" element
+         * Sets (as xml) the "eventSetId" element
          */
-        public void xsetEventSetID(org.apache.xmlbeans.XmlString eventSetID)
+        public void xsetEventSetId(org.apache.xmlbeans.XmlString eventSetId)
         {
             synchronized (monitor())
             {
@@ -154,7 +154,7 @@ public class DownloadFileDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
                 {
                     target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(EVENTSETID$0);
                 }
-                target.set(eventSetID);
+                target.set(eventSetId);
             }
         }
     }

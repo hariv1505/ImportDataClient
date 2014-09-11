@@ -1,14 +1,14 @@
 /*
  * An XML document type.
  * Localname: downloadFileResponse
- * Namespace: http://sltf.unsw.edu.au/topdown
+ * Namespace: http://sltf.unsw.edu.au/services
  * Java type: au.edu.unsw.sltf.services.DownloadFileResponseDocument
  *
  * Automatically generated - do not modify.
  */
 package au.edu.unsw.sltf.services.impl;
 /**
- * A document containing one downloadFileResponse(@http://sltf.unsw.edu.au/topdown) element.
+ * A document containing one downloadFileResponse(@http://sltf.unsw.edu.au/services) element.
  *
  * This is a complex type.
  */
@@ -21,7 +21,7 @@ public class DownloadFileResponseDocumentImpl extends org.apache.xmlbeans.impl.v
     }
     
     private static final javax.xml.namespace.QName DOWNLOADFILERESPONSE$0 = 
-        new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "downloadFileResponse");
+        new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "downloadFileResponse");
     
     
     /**
@@ -74,7 +74,7 @@ public class DownloadFileResponseDocumentImpl extends org.apache.xmlbeans.impl.v
         }
     }
     /**
-     * An XML downloadFileResponse(@http://sltf.unsw.edu.au/topdown).
+     * An XML downloadFileResponse(@http://sltf.unsw.edu.au/services).
      *
      * This is a complex type.
      */
@@ -86,20 +86,20 @@ public class DownloadFileResponseDocumentImpl extends org.apache.xmlbeans.impl.v
             super(sType);
         }
         
-        private static final javax.xml.namespace.QName RETURN$0 = 
-            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "return");
+        private static final javax.xml.namespace.QName DATAURL$0 = 
+            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "dataURL");
         
         
         /**
-         * Gets the "return" element
+         * Gets the "dataURL" element
          */
-        public java.lang.String getReturn()
+        public java.lang.String getDataURL()
         {
             synchronized (monitor())
             {
                 check_orphaned();
                 org.apache.xmlbeans.SimpleValue target = null;
-                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(RETURN$0, 0);
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(DATAURL$0, 0);
                 if (target == null)
                 {
                     return null;
@@ -109,85 +109,52 @@ public class DownloadFileResponseDocumentImpl extends org.apache.xmlbeans.impl.v
         }
         
         /**
-         * Gets (as xml) the "return" element
+         * Gets (as xml) the "dataURL" element
          */
-        public org.apache.xmlbeans.XmlString xgetReturn()
+        public org.apache.xmlbeans.XmlAnyURI xgetDataURL()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(RETURN$0, 0);
+                org.apache.xmlbeans.XmlAnyURI target = null;
+                target = (org.apache.xmlbeans.XmlAnyURI)get_store().find_element_user(DATAURL$0, 0);
                 return target;
             }
         }
         
         /**
-         * Tests for nil "return" element
+         * Sets the "dataURL" element
          */
-        public boolean isNilReturn()
-        {
-            synchronized (monitor())
-            {
-                check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(RETURN$0, 0);
-                if (target == null) return false;
-                return target.isNil();
-            }
-        }
-        
-        /**
-         * Sets the "return" element
-         */
-        public void setReturn(java.lang.String xreturn)
+        public void setDataURL(java.lang.String dataURL)
         {
             synchronized (monitor())
             {
                 check_orphaned();
                 org.apache.xmlbeans.SimpleValue target = null;
-                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(RETURN$0, 0);
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(DATAURL$0, 0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(RETURN$0);
+                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(DATAURL$0);
                 }
-                target.setStringValue(xreturn);
+                target.setStringValue(dataURL);
             }
         }
         
         /**
-         * Sets (as xml) the "return" element
+         * Sets (as xml) the "dataURL" element
          */
-        public void xsetReturn(org.apache.xmlbeans.XmlString xreturn)
+        public void xsetDataURL(org.apache.xmlbeans.XmlAnyURI dataURL)
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(RETURN$0, 0);
+                org.apache.xmlbeans.XmlAnyURI target = null;
+                target = (org.apache.xmlbeans.XmlAnyURI)get_store().find_element_user(DATAURL$0, 0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(RETURN$0);
+                    target = (org.apache.xmlbeans.XmlAnyURI)get_store().add_element_user(DATAURL$0);
                 }
-                target.set(xreturn);
-            }
-        }
-        
-        /**
-         * Nils the "return" element
-         */
-        public void setNilReturn()
-        {
-            synchronized (monitor())
-            {
-                check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(RETURN$0, 0);
-                if (target == null)
-                {
-                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(RETURN$0);
-                }
-                target.setNil();
+                target.set(dataURL);
             }
         }
     }

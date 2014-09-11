@@ -1,4 +1,8 @@
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import au.edu.unsw.sltf.client.ImportDownloadServicesStub;
 import au.edu.unsw.sltf.services.DownloadFileDocument;
 import au.edu.unsw.sltf.services.DownloadFileResponseDocument;
@@ -37,15 +41,24 @@ public class WebServiceClient {
         // Ready the request for rdthImport operation.
         ImportMarketDataDocument reqDoc = ImportMarketDataDocument.Factory.newInstance();
         ImportMarketData req = reqDoc.addNewImportMarketData();
-        req.setDataSource("http://www.cse.unsw.edu.au/~hpaik/9322/assignments/common/files_csv_spec/FinDataSimple.csv");
-        req.setEndDate("29/06/2001");
+        req.setDataSourceURL("http://www.cse.unsw.edu.au/~hpaik/9322/assignments/common/files_csv_spec/FinDataSimple.csv");
+        
+        Date d = new SimpleDateFormat("dd/mm/yyyy").parse("29/06/2001");
+        Calendar s = Calendar.getInstance();
+        s.setTime(d);
+        req.setStartDate(s);
+        
         req.setSec("ABCD");
-        req.setStartDate("01/08/2001");
+        
+        d = new SimpleDateFormat("dd/mm/yyyy").parse("01/08/2001");
+        Calendar e = Calendar.getInstance();
+        e.setTime(d);
+        req.setEndDate(e);
 
         // Use the stub (from generated code) to make the call.
         ImportMarketDataResponseDocument respDoc = stub.importMarketData(reqDoc);
         ImportMarketDataResponse resp = respDoc.getImportMarketDataResponse();
-        String result = resp.getReturn();
+        String result = resp.getEventSetId();
 
         return result;
     }
@@ -55,14 +68,13 @@ public class WebServiceClient {
         DownloadFileDocument reqDoc = DownloadFileDocument.Factory.newInstance();
         DownloadFile req = reqDoc.addNewDownloadFile();
         //TODO: establish event ID
-        req.setEventSetID("3");
+        req.setEventSetId("3");
 
         // Use the stub (from generated code) to make the call.
         DownloadFileResponseDocument respDoc = stub.downloadFile(reqDoc);
         DownloadFileResponse resp = respDoc.getDownloadFileResponse();
-        String result = resp.getReturn();
+        String result = resp.getDataURL();
 
         return result;
     }
 }
-

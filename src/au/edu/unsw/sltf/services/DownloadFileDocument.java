@@ -1,7 +1,7 @@
 /*
  * An XML document type.
  * Localname: downloadFile
- * Namespace: http://sltf.unsw.edu.au/topdown
+ * Namespace: http://sltf.unsw.edu.au/services
  * Java type: au.edu.unsw.sltf.services.DownloadFileDocument
  *
  * Automatically generated - do not modify.
@@ -10,14 +10,14 @@ package au.edu.unsw.sltf.services;
 
 
 /**
- * A document containing one downloadFile(@http://sltf.unsw.edu.au/topdown) element.
+ * A document containing one downloadFile(@http://sltf.unsw.edu.au/services) element.
  *
  * This is a complex type.
  */
 public interface DownloadFileDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DownloadFileDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s3750EB2ABD0F51AFA86611260B2ACC08").resolveHandle("downloadfile7a31doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DownloadFileDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s8361EB0BD085F62915BBD701F402D452").resolveHandle("downloadfilea0e4doctype");
     
     /**
      * Gets the "downloadFile" element
@@ -35,34 +35,34 @@ public interface DownloadFileDocument extends org.apache.xmlbeans.XmlObject
     au.edu.unsw.sltf.services.DownloadFileDocument.DownloadFile addNewDownloadFile();
     
     /**
-     * An XML downloadFile(@http://sltf.unsw.edu.au/topdown).
+     * An XML downloadFile(@http://sltf.unsw.edu.au/services).
      *
      * This is a complex type.
      */
     public interface DownloadFile extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DownloadFile.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s3750EB2ABD0F51AFA86611260B2ACC08").resolveHandle("downloadfile0f71elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DownloadFile.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s8361EB0BD085F62915BBD701F402D452").resolveHandle("downloadfileb3a4elemtype");
         
         /**
-         * Gets the "eventSetID" element
+         * Gets the "eventSetId" element
          */
-        java.lang.String getEventSetID();
+        java.lang.String getEventSetId();
         
         /**
-         * Gets (as xml) the "eventSetID" element
+         * Gets (as xml) the "eventSetId" element
          */
-        org.apache.xmlbeans.XmlString xgetEventSetID();
+        org.apache.xmlbeans.XmlString xgetEventSetId();
         
         /**
-         * Sets the "eventSetID" element
+         * Sets the "eventSetId" element
          */
-        void setEventSetID(java.lang.String eventSetID);
+        void setEventSetId(java.lang.String eventSetId);
         
         /**
-         * Sets (as xml) the "eventSetID" element
+         * Sets (as xml) the "eventSetId" element
          */
-        void xsetEventSetID(org.apache.xmlbeans.XmlString eventSetID);
+        void xsetEventSetId(org.apache.xmlbeans.XmlString eventSetId);
         
         /**
          * A factory class with static methods for creating instances

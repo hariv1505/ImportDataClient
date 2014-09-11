@@ -1,14 +1,14 @@
 /*
  * An XML document type.
  * Localname: importMarketDataResponse
- * Namespace: http://sltf.unsw.edu.au/topdown
+ * Namespace: http://sltf.unsw.edu.au/services
  * Java type: au.edu.unsw.sltf.services.ImportMarketDataResponseDocument
  *
  * Automatically generated - do not modify.
  */
 package au.edu.unsw.sltf.services.impl;
 /**
- * A document containing one importMarketDataResponse(@http://sltf.unsw.edu.au/topdown) element.
+ * A document containing one importMarketDataResponse(@http://sltf.unsw.edu.au/services) element.
  *
  * This is a complex type.
  */
@@ -21,7 +21,7 @@ public class ImportMarketDataResponseDocumentImpl extends org.apache.xmlbeans.im
     }
     
     private static final javax.xml.namespace.QName IMPORTMARKETDATARESPONSE$0 = 
-        new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "importMarketDataResponse");
+        new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "importMarketDataResponse");
     
     
     /**
@@ -74,7 +74,7 @@ public class ImportMarketDataResponseDocumentImpl extends org.apache.xmlbeans.im
         }
     }
     /**
-     * An XML importMarketDataResponse(@http://sltf.unsw.edu.au/topdown).
+     * An XML importMarketDataResponse(@http://sltf.unsw.edu.au/services).
      *
      * This is a complex type.
      */
@@ -86,20 +86,20 @@ public class ImportMarketDataResponseDocumentImpl extends org.apache.xmlbeans.im
             super(sType);
         }
         
-        private static final javax.xml.namespace.QName RETURN$0 = 
-            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/topdown", "return");
+        private static final javax.xml.namespace.QName EVENTSETID$0 = 
+            new javax.xml.namespace.QName("http://sltf.unsw.edu.au/services", "eventSetId");
         
         
         /**
-         * Gets the "return" element
+         * Gets the "eventSetId" element
          */
-        public java.lang.String getReturn()
+        public java.lang.String getEventSetId()
         {
             synchronized (monitor())
             {
                 check_orphaned();
                 org.apache.xmlbeans.SimpleValue target = null;
-                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(RETURN$0, 0);
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(EVENTSETID$0, 0);
                 if (target == null)
                 {
                     return null;
@@ -109,52 +109,52 @@ public class ImportMarketDataResponseDocumentImpl extends org.apache.xmlbeans.im
         }
         
         /**
-         * Gets (as xml) the "return" element
+         * Gets (as xml) the "eventSetId" element
          */
-        public org.apache.xmlbeans.XmlString xgetReturn()
+        public org.apache.xmlbeans.XmlString xgetEventSetId()
         {
             synchronized (monitor())
             {
                 check_orphaned();
                 org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(RETURN$0, 0);
+                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(EVENTSETID$0, 0);
                 return target;
             }
         }
         
         /**
-         * Sets the "return" element
+         * Sets the "eventSetId" element
          */
-        public void setReturn(java.lang.String xreturn)
+        public void setEventSetId(java.lang.String eventSetId)
         {
             synchronized (monitor())
             {
                 check_orphaned();
                 org.apache.xmlbeans.SimpleValue target = null;
-                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(RETURN$0, 0);
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(EVENTSETID$0, 0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(RETURN$0);
+                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(EVENTSETID$0);
                 }
-                target.setStringValue(xreturn);
+                target.setStringValue(eventSetId);
             }
         }
         
         /**
-         * Sets (as xml) the "return" element
+         * Sets (as xml) the "eventSetId" element
          */
-        public void xsetReturn(org.apache.xmlbeans.XmlString xreturn)
+        public void xsetEventSetId(org.apache.xmlbeans.XmlString eventSetId)
         {
             synchronized (monitor())
             {
                 check_orphaned();
                 org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(RETURN$0, 0);
+                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(EVENTSETID$0, 0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(RETURN$0);
+                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(EVENTSETID$0);
                 }
-                target.set(xreturn);
+                target.set(eventSetId);
             }
         }
     }

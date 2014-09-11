@@ -1,7 +1,7 @@
 /*
  * An XML document type.
  * Localname: importMarketData
- * Namespace: http://sltf.unsw.edu.au/topdown
+ * Namespace: http://sltf.unsw.edu.au/services
  * Java type: au.edu.unsw.sltf.services.ImportMarketDataDocument
  *
  * Automatically generated - do not modify.
@@ -10,14 +10,14 @@ package au.edu.unsw.sltf.services;
 
 
 /**
- * A document containing one importMarketData(@http://sltf.unsw.edu.au/topdown) element.
+ * A document containing one importMarketData(@http://sltf.unsw.edu.au/services) element.
  *
  * This is a complex type.
  */
 public interface ImportMarketDataDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImportMarketDataDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s3750EB2ABD0F51AFA86611260B2ACC08").resolveHandle("importmarketdata8b18doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImportMarketDataDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s8361EB0BD085F62915BBD701F402D452").resolveHandle("importmarketdataacdddoctype");
     
     /**
      * Gets the "importMarketData" element
@@ -35,14 +35,14 @@ public interface ImportMarketDataDocument extends org.apache.xmlbeans.XmlObject
     au.edu.unsw.sltf.services.ImportMarketDataDocument.ImportMarketData addNewImportMarketData();
     
     /**
-     * An XML importMarketData(@http://sltf.unsw.edu.au/topdown).
+     * An XML importMarketData(@http://sltf.unsw.edu.au/services).
      *
      * This is a complex type.
      */
     public interface ImportMarketData extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImportMarketData.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s3750EB2ABD0F51AFA86611260B2ACC08").resolveHandle("importmarketdataf791elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImportMarketData.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s8361EB0BD085F62915BBD701F402D452").resolveHandle("importmarketdatacf84elemtype");
         
         /**
          * Gets the "sec" element
@@ -67,62 +67,62 @@ public interface ImportMarketDataDocument extends org.apache.xmlbeans.XmlObject
         /**
          * Gets the "startDate" element
          */
-        java.lang.String getStartDate();
+        java.util.Calendar getStartDate();
         
         /**
          * Gets (as xml) the "startDate" element
          */
-        org.apache.xmlbeans.XmlString xgetStartDate();
+        org.apache.xmlbeans.XmlDateTime xgetStartDate();
         
         /**
          * Sets the "startDate" element
          */
-        void setStartDate(java.lang.String startDate);
+        void setStartDate(java.util.Calendar startDate);
         
         /**
          * Sets (as xml) the "startDate" element
          */
-        void xsetStartDate(org.apache.xmlbeans.XmlString startDate);
+        void xsetStartDate(org.apache.xmlbeans.XmlDateTime startDate);
         
         /**
          * Gets the "endDate" element
          */
-        java.lang.String getEndDate();
+        java.util.Calendar getEndDate();
         
         /**
          * Gets (as xml) the "endDate" element
          */
-        org.apache.xmlbeans.XmlString xgetEndDate();
+        org.apache.xmlbeans.XmlDateTime xgetEndDate();
         
         /**
          * Sets the "endDate" element
          */
-        void setEndDate(java.lang.String endDate);
+        void setEndDate(java.util.Calendar endDate);
         
         /**
          * Sets (as xml) the "endDate" element
          */
-        void xsetEndDate(org.apache.xmlbeans.XmlString endDate);
+        void xsetEndDate(org.apache.xmlbeans.XmlDateTime endDate);
         
         /**
-         * Gets the "dataSource" element
+         * Gets the "dataSourceURL" element
          */
-        java.lang.String getDataSource();
+        java.lang.String getDataSourceURL();
         
         /**
-         * Gets (as xml) the "dataSource" element
+         * Gets (as xml) the "dataSourceURL" element
          */
-        org.apache.xmlbeans.XmlString xgetDataSource();
+        org.apache.xmlbeans.XmlAnyURI xgetDataSourceURL();
         
         /**
-         * Sets the "dataSource" element
+         * Sets the "dataSourceURL" element
          */
-        void setDataSource(java.lang.String dataSource);
+        void setDataSourceURL(java.lang.String dataSourceURL);
         
         /**
-         * Sets (as xml) the "dataSource" element
+         * Sets (as xml) the "dataSourceURL" element
          */
-        void xsetDataSource(org.apache.xmlbeans.XmlString dataSource);
+        void xsetDataSourceURL(org.apache.xmlbeans.XmlAnyURI dataSourceURL);
         
         /**
          * A factory class with static methods for creating instances
