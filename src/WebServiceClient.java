@@ -50,19 +50,28 @@ public class WebServiceClient {
         req.setDataSourceURL("http://localhost:8080/axis2/12345.csv");
         
         Date d = null;
-        try {
+        /*try {
         	d = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ss.SSS").parse("29/06/2001T12:00:00.000");
         } catch(ParseException e) {
         	//TODO
         	return null;
         	//throw new ImportDownloadFaultException("Invalid start date");
-        }
+        }*/
+        
         Calendar s = Calendar.getInstance();
-        s.setTime(d);
+        s.set(Calendar.HOUR, 12);
+        s.set(Calendar.MINUTE, 0);
+        s.set(Calendar.SECOND, 0);
+        s.set(Calendar.MILLISECOND, 0);
+        s.set(Calendar.YEAR, 2001);
+        s.set(Calendar.MONTH, 5);
+        s.set(Calendar.DATE, 29);
+        //s.setTime(d);
         req.setStartDate(s);
         
         req.setSec("ZXQ");
         
+        /*
         try {
         	d = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ss.SSS").parse("01/08/2001T12:00:00.000");
         } catch(ParseException e) {
@@ -70,8 +79,16 @@ public class WebServiceClient {
         	return null;
         	//throw new ImportDownloadFaultException("Invalid end date");
         }
+        */
         Calendar e = Calendar.getInstance();
-        e.setTime(d);
+        //e.setTime(d);
+        e.set(Calendar.HOUR, 12);
+        e.set(Calendar.MINUTE, 0);
+        e.set(Calendar.SECOND, 0);
+        e.set(Calendar.MILLISECOND, 0);
+        e.set(Calendar.YEAR, 2001);
+        e.set(Calendar.MONTH, 7);
+        e.set(Calendar.DATE, 1);
         req.setEndDate(e);
 
         String result = "";
