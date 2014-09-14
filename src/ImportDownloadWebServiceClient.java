@@ -28,28 +28,29 @@ import au.edu.unsw.sltf.services.impl.ImportDownloadFaultDocumentImpl.ImportDown
  * Web service client that connects to the TopDownSimpleServices
  * Web service.
  */
-public class WebServiceClient {
+public class ImportDownloadWebServiceClient {
 
-    public static void main(String[] args) {
+    public static String main(String[] args) {
         String wsURL = "http://localhost:8080/axis2/services/ImportDownloadServices";
         try {
             ImportDownloadServicesStub stub = new ImportDownloadServicesStub(wsURL);
-            System.out.println("The output of importMarketData operation is: ");
-            System.out.println(callImportMarketDataOperation(stub));
-            System.out.println("The output of downloadFile operation is: ");
-            System.out.println(callDownloadFileOperation(stub));
+            if(args[0].equals("import"))
+            	return (callImportMarketDataOperation(stub,args[0],args[1],args[2],args[3]));
+            else
+            	return (callDownloadFileOperation(stub,args[1]));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        return "";
     }
 
-    private static String callImportMarketDataOperation(ImportDownloadServicesStub stub) throws Exception {
+    private static String callImportMarketDataOperation(ImportDownloadServicesStub stub, String sec, String startDate, String endDate, String dataSourceURL) throws Exception {
         // Ready the request for rdthImport operation.
         ImportMarketDataDocument reqDoc = ImportMarketDataDocument.Factory.newInstance();
         ImportMarketData req = reqDoc.addNewImportMarketData();
-        req.setDataSourceURL("http://localhost:8080/axis2/12345.csv");
+        req.setDataSourceURL(dataSourceURL);
         
-        //Date d = null;
+        Date d = null;
         /*try {
         	d = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ss.SSS").parse("29/06/2001T12:00:00.000");
         } catch(ParseException e) {
@@ -69,7 +70,7 @@ public class WebServiceClient {
         //s.setTime(d);
         req.setStartDate(s);
         
-        req.setSec("ZXQ");
+        req.setSec(sec);
         
         /*
         try {
@@ -109,11 +110,12 @@ public class WebServiceClient {
         return result;
     }
 
-    private static String callDownloadFileOperation(ImportDownloadServicesStub stub) throws Exception{
+    private static String callDownloadFileOperation(ImportDownloadServicesStub stub, String eventSetId) throws Exception{
         // Ready the request for downloadFile operation.
         DownloadFileDocument reqDoc = DownloadFileDocument.Factory.newInstance();
         DownloadFile req = reqDoc.addNewDownloadFile();
-        req.setEventSetId("12345");
+        //TODO: establish event ID
+        req.setEventSetId(eventSetId);
 
         // Use the stub (from generated code) to make the call.
         String result = "";
