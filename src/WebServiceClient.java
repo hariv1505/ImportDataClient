@@ -64,7 +64,7 @@ public class WebServiceClient {
         s.set(Calendar.SECOND, 0);
         s.set(Calendar.MILLISECOND, 0);
         s.set(Calendar.YEAR, 2001);
-        s.set(Calendar.MONTH, 5);
+        s.set(Calendar.MONTH, 6);
         s.set(Calendar.DATE, 29);
         //s.setTime(d);
         req.setStartDate(s);

@@ -69,6 +69,5 @@
 	<classpathentry kind="lib" path="/apps/axis2-1.6.2/lib/xml-resolver-1.2.jar"/>
 	<classpathentry kind="lib" path="/apps/axis2-1.6.2/lib/xmlbeans-2.3.0.jar"/>
 	<classpathentry kind="lib" path="/apps/axis2-1.6.2/lib/XmlSchema-1.4.7.jar"/>
-	<classpathentry kind="lib" path="/home/hari/axis2-1.6.2/lib/axis2-kernel-1.6.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
