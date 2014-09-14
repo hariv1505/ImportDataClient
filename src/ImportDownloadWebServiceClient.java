@@ -51,47 +51,15 @@ public class ImportDownloadWebServiceClient {
         req.setDataSourceURL(dataSourceURL);
         
         Date d = null;
-        /*try {
-        	d = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ss.SSS").parse("29/06/2001T12:00:00.000");
-        } catch(ParseException e) {
-        	//TODO
-        	return null;
-        	//throw new ImportDownloadFaultException("Invalid start date");
-        }*/
-        
-        Calendar s = Calendar.getInstance();
-        s.set(Calendar.HOUR, 12);
-        s.set(Calendar.MINUTE, 0);
-        s.set(Calendar.SECOND, 0);
-        s.set(Calendar.MILLISECOND, 0);
-        s.set(Calendar.YEAR, 2001);
-        s.set(Calendar.MONTH, 6);
-        s.set(Calendar.DATE, 29);
-        //s.setTime(d);
+        String startTime = "";
+        String endTime = "";
+        Calendar s = createCalendar(startTime);
+        Calendar e = createCalendar(endTime);
         req.setStartDate(s);
+        req.setEndDate(e);
         
         req.setSec(sec);
         
-        /*
-        try {
-        	d = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ss.SSS").parse("01/08/2001T12:00:00.000");
-        } catch(ParseException e) {
-        	//TODO
-        	return null;
-        	//throw new ImportDownloadFaultException("Invalid end date");
-        }
-        */
-        Calendar e = Calendar.getInstance();
-        //e.setTime(d);
-        e.set(Calendar.HOUR, 12);
-        e.set(Calendar.MINUTE, 0);
-        e.set(Calendar.SECOND, 0);
-        e.set(Calendar.MILLISECOND, 0);
-        e.set(Calendar.YEAR, 2001);
-        e.set(Calendar.MONTH, 7);
-        e.set(Calendar.DATE, 1);
-        req.setEndDate(e);
-
         String result = "";
         try {
         	ImportMarketDataResponseDocument respDoc = stub.importMarketData(reqDoc);
@@ -110,11 +78,34 @@ public class ImportDownloadWebServiceClient {
         return result;
     }
 
-    private static String callDownloadFileOperation(ImportDownloadServicesStub stub, String eventSetId) throws Exception{
+    private static Calendar createCalendar(String time) {
+		String[] times = time.split("T");
+		try {
+			Date d = new SimpleDateFormat("yyyy-MM-dd").parse(times[0]);
+			Calendar c = Calendar.getInstance();
+			c.setTime(d);
+			convertTime(times[1], c);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		return null;
+	}
+    
+    private static void convertTime(String time, Calendar c) {
+		String[] times = time.split(":");
+		String[] seconds = times[2].split("\\.");
+		c.set(Calendar.HOUR, Integer.parseInt(times[0]));
+		c.set(Calendar.MINUTE, Integer.parseInt(times[1]));
+		c.set(Calendar.SECOND, Integer.parseInt(seconds[0]));
+		c.set(Calendar.MILLISECOND, Integer.parseInt(seconds[1]));
+	}
+
+	private static String callDownloadFileOperation(ImportDownloadServicesStub stub, String eventSetId) throws Exception{
         // Ready the request for downloadFile operation.
         DownloadFileDocument reqDoc = DownloadFileDocument.Factory.newInstance();
         DownloadFile req = reqDoc.addNewDownloadFile();
-        //TODO: establish event ID
         req.setEventSetId(eventSetId);
 
         // Use the stub (from generated code) to make the call.
