@@ -49,7 +49,7 @@ public class WebServiceClient {
         ImportMarketData req = reqDoc.addNewImportMarketData();
         req.setDataSourceURL("http://localhost:8080/axis2/12345.csv");
         
-        Date d = null;
+        //Date d = null;
         /*try {
         	d = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ss.SSS").parse("29/06/2001T12:00:00.000");
         } catch(ParseException e) {
@@ -113,7 +113,6 @@ public class WebServiceClient {
         // Ready the request for downloadFile operation.
         DownloadFileDocument reqDoc = DownloadFileDocument.Factory.newInstance();
         DownloadFile req = reqDoc.addNewDownloadFile();
-        //TODO: establish event ID
         req.setEventSetId("12345");
 
         // Use the stub (from generated code) to make the call.
