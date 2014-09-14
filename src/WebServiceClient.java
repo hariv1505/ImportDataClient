@@ -31,7 +31,7 @@ import au.edu.unsw.sltf.services.impl.ImportDownloadFaultDocumentImpl.ImportDown
 public class WebServiceClient {
 
     public static void main(String[] args) {
-        String wsURL = "http://localhost:8080/axis2/services/TopDownSimpleServices";
+        String wsURL = "http://localhost:8080/axis2/services/ImportDownloadServices";
         try {
             ImportDownloadServicesStub stub = new ImportDownloadServicesStub(wsURL);
             System.out.println("The output of importMarketData operation is: ");
@@ -47,11 +47,11 @@ public class WebServiceClient {
         // Ready the request for rdthImport operation.
         ImportMarketDataDocument reqDoc = ImportMarketDataDocument.Factory.newInstance();
         ImportMarketData req = reqDoc.addNewImportMarketData();
-        req.setDataSourceURL("http://www.cse.unsw.edu.au/~hpaik/9322/assignments/common/files_csv_spec/FinDataSimple.csv");
+        req.setDataSourceURL("http://localhost:8080/axis2/12345.csv");
         
         Date d = null;
         try {
-        	d = new SimpleDateFormat("dd/mm/yyyyThh:mm:ss.SS").parse("29/06/2001T12:00:00.00");
+        	d = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ss.SSS").parse("29/06/2001T12:00:00.000");
         } catch(ParseException e) {
         	//TODO
         	return null;
@@ -61,10 +61,10 @@ public class WebServiceClient {
         s.setTime(d);
         req.setStartDate(s);
         
-        req.setSec("ABCD");
+        req.setSec("ZXQ");
         
         try {
-        	d = new SimpleDateFormat("dd/mm/yyyyThh:mm:ss.SS").parse("01/08/2001T12:00:00.00");
+        	d = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ss.SSS").parse("01/08/2001T12:00:00.000");
         } catch(ParseException e) {
         	//TODO
         	return null;
@@ -97,7 +97,7 @@ public class WebServiceClient {
         DownloadFileDocument reqDoc = DownloadFileDocument.Factory.newInstance();
         DownloadFile req = reqDoc.addNewDownloadFile();
         //TODO: establish event ID
-        req.setEventSetId("3");
+        req.setEventSetId("12345");
 
         // Use the stub (from generated code) to make the call.
         String result = "";
