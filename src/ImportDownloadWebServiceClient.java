@@ -85,7 +85,7 @@ public class ImportDownloadWebServiceClient {
     private static Calendar createCalendar(String time) {
 		String[] times = time.split("T");
 		try {
-			Date d = new SimpleDateFormat("yyyy-MMM-dd").parse(times[0]);
+			Date d = new SimpleDateFormat("yyyy-MM-dd").parse(times[0]);
 			Calendar c = Calendar.getInstance();
 			c.setTime(d);
 			convertTime(times[1], c);
